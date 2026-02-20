@@ -1,0 +1,41 @@
+apiVersion: training.educates.dev/v1beta1
+kind: Workshop
+metadata:
+  name: lab-python-air-intro
+spec:
+  title: Introduction to the Air Web Framework
+  description: Learn the fundamentals of the Air web framework for Python, including Air Tags for HTML generation, routing, and path parameters.
+  duration: 30m
+  difficulty: beginner
+  publish:
+    image: "$(image_repository)/lab-python-air-intro-files:$(workshop_version)"
+    files:
+    - directory:
+        path: .
+      includePaths:
+      - /workshop/**
+      - /exercises/**
+      - /README.md
+  workshop:
+    files:
+    - image:
+        url: "$(image_repository)/lab-python-air-intro-files:$(workshop_version)"
+  session:
+    namespaces:
+      budget: medium
+      security:
+        token:
+          enabled: false
+    applications:
+      terminal:
+        enabled: true
+        layout: split
+      editor:
+        enabled: true
+    ingresses:
+    - name: app
+      protocol: http
+      port: 8000
+    dashboards:
+    - name: App
+      url: "$(ingress_protocol)://app-$(session_hostname)/"

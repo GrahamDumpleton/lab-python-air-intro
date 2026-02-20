@@ -1,0 +1,9 @@
+[project]
+name = "air-intro"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = ["air"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

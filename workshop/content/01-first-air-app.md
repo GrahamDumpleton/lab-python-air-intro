@@ -30,7 +30,7 @@ tags) and **keyword arguments** as HTML attributes. For example,
 Start the Air development server in the first terminal:
 
 ```terminal:execute
-command: air run
+command: air run app
 ```
 
 The server starts on port 8000 with auto-reload enabled — it will

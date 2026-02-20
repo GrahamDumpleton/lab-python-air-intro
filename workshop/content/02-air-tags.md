@@ -35,12 +35,6 @@ replacement: |2
               ),
 ```
 
-Open the file to see the full updated application:
-
-```editor:open-file
-file: ~/exercises/app.py
-```
-
 Here is what was added:
 
 - **`style="color: #2c3e50;"`** on the `air.H1` tag passes an HTML attribute

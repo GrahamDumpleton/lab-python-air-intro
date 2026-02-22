@@ -38,4 +38,4 @@ spec:
       port: 8000
     dashboards:
     - name: App
-      url: "$(ingress_protocol)://app-$(session_hostname)/"
+      url: "$(ingress_protocol)://app-$(session_hostname)$(ingress_port_suffix)/"
